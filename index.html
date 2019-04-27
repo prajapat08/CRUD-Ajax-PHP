@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+ <script> 
+ 	function deldata(){
+				 		$(document).ready(function () {
+
+				 		var id = document.getElementById('v1').value;
+
+				  $.ajax({           ojdifruwuwusdisdkkou8u8fhuy8idj       
+				    url: "index3b.php",
+				    type: "GET",
+				    data: { 
+				    	method:'delete',
+				    	id: id,
+
+				    },
+				    success: function(result) {
+				         console.log(result);   
+				    } 
+				});
+
+})
+  }
+
+
+     function getdata(){
+				 		$(document).ready(function () {
+
+				 		var id = document.getElementById('id1').value;
+
+				  $.ajax({
+				    url: "index3b.php",
+				    type: "GET",
+				    data: { 
+				    	method:'get',
+				    	id: id,
+				    	 
+
+				    },
+				    success: function(result) {
+				         console.log(result);   
+				    } 
+				});
+
+})
+  }     
+  function getalldata(){
+				 		$(document).ready(function () {
+
+				 		//var id = document.getElementById('id1').value;
+
+				  $.ajax({
+				    url: "index3b.php",
+				    type: "GET",
+				    data: { 
+				    	method:'get',
+				    	 
+				    	 
+
+				    },
+				    success: function(result) {
+				         console.log(result);   
+				    } 
+				});
+
+})
+  }
+
+
+
+       function postdata(){
+				 		$(document).ready(function () {
+
+				 		var name = document.getElementById('n1').value;
+				 		var age = document.getElementById('a1').value;
+				 		var email = document.getElementById('e1').value;
+				 		
+
+
+				  $.ajax({
+				    url: "index3b.php",
+				    type: "GET",
+				    data: { 
+				    	method:'post',
+				    	name: name,
+				    	age: age,
+				    	email: email
+				    	 
+
+				    },
+				    success: function(result) {
+				         console.log(result);   
+				    } 
+				});
+
+})
+  }
+
+   function putdata(){
+				 		$(document).ready(function () {
+                          var id = document.getElementById('i2').value;
+
+				 		var name = document.getElementById('n2').value;
+				 		var age = document.getElementById('a2').value;
+				 		var email = document.getElementById('e2').value;
+				 		
+
+
+				  $.ajax({
+				    url: "index3b.php",
+				    type: "GET",
+				    data: { 
+				    	method:'put',
+				    	id: id,
+				    	name: name,
+				    	age: age,
+				    	email: email
+				    	 
+
+				    },
+				    success: function(result) {
+				         console.log(result);   
+				    } 
+				});
+
+})
+  }
+</script>
+<style>
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+ 
+</style>
+</head>
+<body ng-app="crudapp">
+ 
+ <div> 
+	 <h1>GET</h1>
+	 id: <input type="text" id="id1"  placeholder="please_ID"/> <br>
+	 <button type="button" onclick=getdata()  id="get1" > GET </button> <br>
+	 <br>
+	<button type="button" onclick=getalldata()  id="get1" > GET all data</button>
+</div>
+
+ <div>
+ 
+	<h1>POST</h1>
+	 
+	name: <input type="text" id="n1"  placeholder="please_name"/> <br>
+	age: <input type="text" id="a1"  placeholder=" please_age"/> <br>
+	email: <input type="text" id="e1" placeholder="please_email"/> <br>
+	<button type="button" onclick=postdata() > POST </button>
+ 
+ </div>
+
+
+<div> 
+	<h1>PUT</h1>
+	id: <input type="text" id="i2" placeholder="ID"/> <br>
+	name: <input type="text" id="n2"  placeholder="please_name"/> <br>
+	age: <input type="text" id="a2"  placeholder=" please_age"/> <br>
+	email: <input type="text" id="e2" placeholder="please_email"/> <br>
+	<button type="button" onclick=putdata() > POST </button>
+</div>
+
+
+<div> 
+	<h1>DELETE</h1>
+	<input type="text" name="id2" id="d1" placeholder="ID"/> <br>
+	 
+	<button type="button" onclick=deldata() id="button3" >Dekete </button> <br>
+
+ 
+ 
+
+</body>
+
+
+
+</html>
